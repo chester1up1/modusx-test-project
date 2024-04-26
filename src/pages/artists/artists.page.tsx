@@ -4,11 +4,10 @@ import { Helmet, HelmetProvider } from "react-helmet-async"
 export default function ArtistsPage() {
   return (
     <HelmetProvider>
-      <article>
-        <Helmet>
-          <title>Артисти</title>
-        </Helmet>
-      </article>
+      <Helmet>
+        <title>Артисти</title>
+      </Helmet>
+      <article>Артисти</article>
     </HelmetProvider>
   )
 }
