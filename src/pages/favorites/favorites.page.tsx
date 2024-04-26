@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet, HelmetProvider } from "react-helmet-async"
 
-export default function FavoritesPage() {
+const FavoritesPage = () => {
   return (
     <HelmetProvider>
       <Helmet>
@@ -11,3 +11,5 @@ export default function FavoritesPage() {
     </HelmetProvider>
   )
 }
+
+export default FavoritesPage

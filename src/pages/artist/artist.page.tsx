@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet, HelmetProvider } from "react-helmet-async"
 
-export default function ArtistPage() {
+const ArtistPage = () => {
   return (
     <HelmetProvider>
       <Helmet>
@@ -11,3 +11,5 @@ export default function ArtistPage() {
     </HelmetProvider>
   )
 }
+
+export default ArtistPage

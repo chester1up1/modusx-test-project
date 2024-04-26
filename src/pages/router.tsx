@@ -1,4 +1,5 @@
-import { createBrowserRouter } from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import MainLayout from "modules/layouts/Main.layout"
 
 import ArtistPage from "./artist/artist.page"
 import ArtistsPage from "./artists/artists.page"
@@ -10,19 +11,18 @@ enum RouterPath {
   Favorites = "/favorites",
 }
 
-const router = createBrowserRouter([
-  {
-    path: RouterPath.Home,
-    element: <ArtistsPage />,
-  },
-  {
-    path: RouterPath.Artist,
-    element: <ArtistPage />,
-  },
-  {
-    path: RouterPath.Favorites,
-    element: <FavoritesPage />,
-  },
-])
+const RouterComponent = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path={RouterPath.Home} element={<MainLayout />}>
+          <Route index element={<ArtistsPage />} />
+          <Route path={RouterPath.Artist} element={<ArtistPage />} />
+          <Route path={RouterPath.Favorites} element={<FavoritesPage />} />
+        </Route>
+      </Routes>
+    </Router>
+  )
+}
 
-export { router, RouterPath }
+export { RouterComponent, RouterPath }
