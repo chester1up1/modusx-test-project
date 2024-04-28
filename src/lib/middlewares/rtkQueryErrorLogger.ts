@@ -8,8 +8,7 @@ export const rtkQueryErrorLogger: Middleware = () => (next) => (action) => {
     toast.warn(
       `Request error! | ${
         "data" in action.error
-          ? //@ts-ignore
-            (action.error.data as { message: string }).message
+          ? (action.error.message as unknown as { message: string }).message
           : action.error.message
       }`
     )

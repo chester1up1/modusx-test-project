@@ -5,7 +5,7 @@
     "**/build": true,
     "**/coverage": true
   },
-  "editor.formatOnSave": true, // auto format the file on each save
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   }
