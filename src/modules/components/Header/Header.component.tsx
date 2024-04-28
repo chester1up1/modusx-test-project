@@ -4,8 +4,8 @@ import { Typography } from "@mui/material"
 import { capitalizeFirstLetter } from "helpers/common"
 import { RouterPath } from "pages/router"
 
-import BackButton from "./Back.button"
-import FavoriteButton from "./Favorite.button"
+import BackButton from "./components/Back.button"
+import FavoriteButton from "./components/Favorite.button"
 
 import styles from "./styles.module.scss"
 
@@ -17,7 +17,7 @@ const HeaderComponent = () => {
 
   const title = isHomePage
     ? "Artists"
-    : capitalizeFirstLetter(pathname.substring(1))
+    : capitalizeFirstLetter(pathname.substring(1).split("/")[0])
 
   const navigateToHome = () => navigate(RouterPath.Home)
 
@@ -33,6 +33,7 @@ const HeaderComponent = () => {
         <Typography variant="h1" fontWeight="700">
           {title}
         </Typography>
+
         <FavoriteButton />
       </div>
     </header>

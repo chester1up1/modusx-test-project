@@ -1,14 +1,22 @@
 import React from "react"
 import { Outlet } from "react-router-dom"
+import { Box } from "@mui/material"
 import HeaderComponent from "modules/components/Header/Header.component"
 
 const MainLayout = () => {
   return (
     <>
       <HeaderComponent />
-      <main>
+      <Box
+        component="main"
+        sx={{
+          maxWidth: 720,
+          padding: "32px",
+          margin: "0 auto",
+        }}
+      >
         <Outlet />
-      </main>
+      </Box>
     </>
   )
 }

@@ -1,0 +1,30 @@
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 99;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.artistsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  & > article {
+    animation: fade 3s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+      transition: 0.1s ease-in;
+    }
+    & > div:first-of-type {
+      height: 128px;
+    }
+  }
+}

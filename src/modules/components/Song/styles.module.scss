@@ -1,0 +1,31 @@
+.song {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 4px 6px;
+  border-radius: 12px;
+  & > img {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+  }
+  & > div {
+    & p {
+      font-weight: bold;
+    }
+    & > p {
+      font-style: italic;
+    }
+    & > div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+}

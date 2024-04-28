@@ -1,0 +1,32 @@
+.artistInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  & > img {
+    border-radius: 90px;
+  }
+  & > h5 {
+    font-weight: bold;
+    padding-top: 16px;
+    font-style: italic;
+  }
+}
+
+.songs {
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  gap: 32px;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  & > nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -5,6 +5,7 @@ import { store } from "store"
 
 import App from "./App"
 
+import "react-toastify/dist/ReactToastify.css"
 import "global.css"
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)

@@ -1,5 +1,4 @@
-import React from "react"
-import { FC } from "react"
+import React, { FC } from "react"
 import { ArrowBackIosNewOutlined } from "@mui/icons-material"
 import { IconButton } from "@mui/material"
 
@@ -21,7 +20,7 @@ const BackButton: FC<BackButtonInterface> = ({
         visibility: isHomePage ? "hidden" : "none",
       }}
     >
-      <ArrowBackIosNewOutlined htmlColor="black" />
+      <ArrowBackIosNewOutlined htmlColor="#fff" />
     </IconButton>
   )
 }

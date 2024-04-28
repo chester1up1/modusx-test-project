@@ -17,7 +17,7 @@ const RouterComponent = () => {
       <Routes>
         <Route path={RouterPath.Home} element={<MainLayout />}>
           <Route index element={<ArtistsPage />} />
-          <Route path={RouterPath.Artist} element={<ArtistPage />} />
+          <Route path={`${RouterPath.Artist}/:id`} element={<ArtistPage />} />
           <Route path={RouterPath.Favorites} element={<FavoritesPage />} />
         </Route>
       </Routes>

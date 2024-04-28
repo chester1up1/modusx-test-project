@@ -1,5 +1,6 @@
 import React from "react"
 import { Helmet, HelmetProvider } from "react-helmet-async"
+import ArtistComponent from "modules/components/Artist/Artist.component"
 
 const ArtistPage = () => {
   return (
@@ -7,7 +8,7 @@ const ArtistPage = () => {
       <Helmet>
         <title>Артист</title>
       </Helmet>
-      <article>Артист</article>
+      <ArtistComponent />
     </HelmetProvider>
   )
 }
